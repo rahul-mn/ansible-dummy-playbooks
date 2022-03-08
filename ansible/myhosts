@@ -1,0 +1,5 @@
+[test]
+slave1
+
+[staging]
+slave1

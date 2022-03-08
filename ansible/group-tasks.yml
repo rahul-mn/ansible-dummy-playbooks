@@ -1,0 +1,7 @@
+---
+- name: create a dev group
+  group:
+    name: dev
+- name: create a prod group
+  group:
+    name: prod

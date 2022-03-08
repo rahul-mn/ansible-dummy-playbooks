@@ -1,0 +1,16 @@
+---
+- name: Using register to store a cmd output
+  hosts: all
+  tasks:
+  - name: store cmd output in var
+    command: free -h
+    register: memory_details
+  - name: Inspect the variable
+    debug:
+      var: memory_details
+  - name: Show the variable value
+    debug:
+      msg: "{{ memory_details.stdout }}"
+  - name: display ip address of all nodes
+    debug:
+      msg: IP addres is {{ ansible_facts.default_ipv4.address }}

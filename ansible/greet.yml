@@ -1,0 +1,12 @@
+---
+- name: variable at runtime
+  hosts: all
+  vars_prompt:
+  - name: username
+    prompt: Please type your name
+    private: yes
+
+  tasks:
+  - name: greet user
+    debug:
+      msg: Hello {{ username }}

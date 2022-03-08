@@ -1,0 +1,23 @@
+---
+- name: working with variables
+  hosts: all
+  #  vars_files: myvars.yml # include file statically or else use include_vars
+  tasks:
+  - name: include the vars file
+    include_vars: myvars.yml
+
+  - name: print my favourite color value
+    debug:
+      msg: My fav color is {{ fav_color }}.
+
+  - name: show HTTPS port
+    debug:
+      msg: HTTPS default port is {{ list_ports[2] }}
+
+  - name:   show shell of jabar
+    debug:
+      msg: Shell of Jabar is {{ employee.jabar.shell }}
+
+  - name: local variable
+    debug:
+      msg: An Octupus has {{ ansible_local.fun.fun.octupus }}

@@ -1,0 +1,10 @@
+---
+- name: Print even no. btw 20 to 40
+  hosts: localhost
+  tasks:
+  - name: even digit no.
+    debug:
+      msg: "{{ item }}"
+    loop:  "{{ range(22,40,2) | list }}"
+    loop_control: 
+      pause: .1

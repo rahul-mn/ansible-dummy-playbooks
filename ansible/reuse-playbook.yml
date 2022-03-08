@@ -1,0 +1,10 @@
+---
+- name: reusing playbook
+  hosts: all
+  tasks:
+  - name: reboot the server
+    reboot:
+      msg: server is rebooting
+
+- name: run ansible-playbook
+  include: ansible-playbook.yml

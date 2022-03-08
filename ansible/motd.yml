@@ -1,0 +1,9 @@
+---
+- name: Set MOTD on the nodes
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: set motd to msg variable
+    copy:
+      content: "{{ message }}"
+      dest: /etc/motd

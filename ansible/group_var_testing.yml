@@ -1,0 +1,8 @@
+---
+- name: Installing packages
+  hosts: all
+  tasks:
+  - name: install the packages
+    package:
+      name: "{{ pkg }}"
+      state: present

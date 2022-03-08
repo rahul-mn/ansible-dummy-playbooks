@@ -1,0 +1,14 @@
+---
+fav_color: brown
+
+list_ports: [22, 80, 443,3306, 3389, 8080]
+
+employee:
+  rahul:
+    username: rahul762
+    uid: 101
+    shell: /bin/bash
+  jabar:
+    username: jabar666
+    uid: 666
+    shell: /bin/sh

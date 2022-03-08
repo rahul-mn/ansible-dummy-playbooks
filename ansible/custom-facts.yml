@@ -1,0 +1,14 @@
+---
+- name: Add custom facts in slave1
+  hosts: slave1
+  tasks:
+  - name: create directory for facts
+    file:
+      path: /etc/ansible/facts.d
+      mode: 755
+      owner: ansible
+      state: directory
+  - name: copy facts from local to slave1
+    copy:
+      src: fun.fact
+      dest: /etc/ansible/facts.d
